@@ -6,8 +6,7 @@ The user needs to provide a path to a text file storing their known vocabulary o
 
 
 ### Later features to consider
-Support for words. Upload a vocabulary file of words, use a segmentation library to segment the words in the media file and calculate known frequency.
+- Support for words. Upload a vocabulary file of words, use a segmentation library to segment the words in the media file and calculate known frequency.
 Frequency plots of characters/words in the media file.
-Overall difficulty score of book regardless of vocabulary.
-Difficulty scores for predefined levels of proficiency, e.g., compare against HSK 1-6 (old) and HSK 1-9 (new)
- 
+- Overall difficulty score of book regardless of vocabulary.
+- Difficulty scores for predefined levels of proficiency, e.g., compare against HSK 1-6 (old) and HSK 1-9 (new)

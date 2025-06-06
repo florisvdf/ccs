@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# IDE
+.idea
+
+# Project files
+.gitignore
+notebooks/development
