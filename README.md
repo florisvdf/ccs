@@ -25,9 +25,15 @@ a percentage.
 # Usage
 
 ## comprehension_report
+comprehension_report.py
 Vocabulary options. --hsk flag or provide path
 -- words
 -- characters
+
+Returns:
+- A comprehension score for each vocabulary passed
+- A plot displaying the number of words/characters to learn to reach remaining 
+comprehension scores for each vocabulary passed
 
 ## generate_vocab
 -- words

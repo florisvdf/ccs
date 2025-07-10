@@ -58,7 +58,9 @@ def plot_characters_to_learn(media: str, vocabulary: List[str]) -> plt.Axes:
     xticks = np.arange(0, amount[-1] + 400, 400)
     ax.set_xticks(xticks)
     ax.tick_params(axis="x", labelrotation=45)
-    ax.set_title("Number of characters to learn to reach desired comprehension", fontsize=12)
+    ax.set_title(
+        "Number of characters to learn to reach desired comprehension", fontsize=12
+    )
     ax.set_xlabel("Amount of Extra Characters", fontsize=10)
     ax.set_ylabel("Score Reached", fontsize=10)
     ax.xaxis.grid()

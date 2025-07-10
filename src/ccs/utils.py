@@ -113,7 +113,9 @@ def score_hsk_word_difficulty(media: str, version: str = "new") -> Dict[str, flo
     return scores
 
 
-def score_hsk_character_difficulty(media: str, version: str = "new") -> Dict[str, float]:
+def score_hsk_character_difficulty(
+    media: str, version: str = "new"
+) -> Dict[str, float]:
     data_dir = DATA_ROOT / f"vocabulary/characters/hsk_{version}"
     scores = {}
     for filename in data_dir.glob("*.txt"):
@@ -142,7 +144,9 @@ def count_words_till_mastery(media: str, vocabulary: List[str]) -> int:
     return words_unknown
 
 
-def word_vocab_to_learn(media: str, vocabulary: List[str], desired_score: float) -> List[str]:
+def word_vocab_to_learn(
+    media: str, vocabulary: List[str], desired_score: float
+) -> List[str]:
     word_counts = count_words(media)
     total_words = sum(word_counts.values())
     unknown_counts = {}
@@ -161,7 +165,10 @@ def word_vocab_to_learn(media: str, vocabulary: List[str], desired_score: float)
             break
     return new_vocab
 
-def character_vocab_to_learn(media: str, vocabulary: str, desired_score: float) -> List[str]:
+
+def character_vocab_to_learn(
+    media: str, vocabulary: str, desired_score: float
+) -> List[str]:
     char_counts = count_characters(media)
     total_chars = sum(char_counts.values())
     unknown_counts = {}

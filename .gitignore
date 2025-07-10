@@ -18,4 +18,5 @@ notebooks/development
 results
 data/my_character_vocab.txt
 data/my_word_vocab.txt
+temp/
 
