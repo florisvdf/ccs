@@ -26,9 +26,7 @@ plotting_function = {
 }
 
 
-def main(
-    media: str, unit: str, output_path: str, vocab: str = "hsk_old"
-):
+def main(media: str, unit: str, output_path: str, vocab: str = "hsk_old"):
     """Also save some book stats: total number of words/chars in media,
     unique number of words/chars"""
     body = read_media(Path(media))
