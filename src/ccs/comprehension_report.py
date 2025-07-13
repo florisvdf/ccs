@@ -1,4 +1,3 @@
-from typing import Optional
 from pathlib import Path
 import json
 from loguru import logger
@@ -28,7 +27,7 @@ plotting_function = {
 
 
 def main(
-    media: str, unit: str, output_path: Optional[str] = None, vocab: str = "hsk_old"
+    media: str, unit: str, output_path: str, vocab: str = "hsk_old"
 ):
     """Also save some book stats: total number of words/chars in media,
     unique number of words/chars"""
