@@ -24,7 +24,8 @@ def is_all_simplified_chinese(text: str) -> bool:
 
 
 def remove_non_chinese_words(words: List[str]) -> List[str]:
-    return [word for word in words if is_all_simplified_chinese(word)]
+    filtered_words = [word for word in words if is_all_simplified_chinese(word)]
+    return filtered_words
 
 
 def determine_encoding(path: Path) -> str:
@@ -76,10 +77,16 @@ def count_characters(text: str) -> Dict[str, int]:
     return dict(Counter(text))
 
 
-def count_words(text: str, cut_all: bool = False) -> Dict[str, int]:
+def count_words(
+    text: str, cut_all: bool = False, filter_by_dictionary="XDHYCD7th"
+) -> Dict[str, int]:
     segmented_words = jieba.cut(text, cut_all=cut_all)
     segmented_words = remove_non_chinese_words(segmented_words)
-    return dict(Counter(segmented_words))
+    counts = dict(Counter(segmented_words))
+    if filter_by_dictionary:
+        dictionary = read_word_vocab(DATA_ROOT / "dictionary/XDHYCD7th_words.txt")
+        counts = {word: count for word, count in counts.items() if word in dictionary}
+    return counts
 
 
 def score_character_comprehension(media: str, vocabulary: str) -> float:

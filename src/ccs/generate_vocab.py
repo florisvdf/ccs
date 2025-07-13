@@ -28,7 +28,7 @@ def main(
     with open(Path(output_path) / f"{unit}_vocab_learn.txt", "w") as fp:
         for entry in vocab_to_learn:
             fp.write(f"{entry}\n")
-    logger.success(f"Wrote vocab to learn to {output_path}.")
+    logger.success(f"Wrote {len(vocab_to_learn)} {unit} to learn to {output_path}.")
 
 
 if __name__ == "__main__":
